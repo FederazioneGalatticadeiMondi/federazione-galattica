@@ -1,158 +1,47 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Federazione Galattica dei Mondi</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Georgia, serif;
-      color: #fff7dc;
-      background:
-        linear-gradient(rgba(3,7,18,.68), rgba(3,7,18,.92)),
-        url("FederazioneGalatticadeiMondi Immagine Sito.jpeg") center/cover fixed no-repeat;
-      text-align: center;
-    }
-    header {
-      position: sticky; top: 0; z-index: 10;
-      background: rgba(3,8,20,.9);
-      border-bottom: 1px solid rgba(246,200,76,.35);
-      padding: 14px 20px;
-    }
-    nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
-    nav a { color: #f6c84c; text-decoration: none; font-weight: bold; padding: 8px 10px; }
-    .hero { min-height: 92vh; display: flex; align-items: center; justify-content: center; padding: 60px 20px; }
-    .hero-card, .box {
-      max-width: 980px; margin: 0 auto; padding: 32px 22px;
-      background: rgba(5,13,31,.72);
-      border: 1px solid rgba(246,200,76,.32);
-      border-radius: 24px;
-      box-shadow: 0 0 35px rgba(0,0,0,.45);
-    }
-    .hero img {
-      width: min(100%, 760px);
-      border-radius: 22px;
-      border: 1px solid rgba(246,200,76,.35);
-      margin-bottom: 24px;
-    }
-    h1 { color: #f6c84c; font-size: clamp(38px, 6vw, 72px); margin: 10px 0; }
-    h2 { color: #f6c84c; font-size: clamp(28px, 4vw, 46px); margin-top: 0; }
-    h3 { color: #f6c84c; }
-    p { font-size: 19px; line-height: 1.7; max-width: 860px; margin: 16px auto; }
-    .subtitle { font-size: clamp(18px, 2.4vw, 27px); font-weight: bold; }
-    .button, button {
-      display: inline-block; margin-top: 12px; padding: 15px 26px;
-      border-radius: 999px; border: none;
-      background: linear-gradient(135deg, #f6c84c, #b88720);
-      color: #081020; text-decoration: none; font-weight: bold; cursor: pointer;
-    }
-    section { padding: 65px 20px; }
-    .grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px; margin-top: 28px;
-    }
-    .card {
-      padding: 22px; border-radius: 18px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(246,200,76,.22);
-    }
-    form { display: grid; gap: 14px; max-width: 680px; margin: 25px auto 0; }
-    input, textarea {
-      width: 100%; padding: 14px 16px; border-radius: 12px;
-      border: 1px solid rgba(246,200,76,.55);
-      background: rgba(255,255,255,.92);
-      font-size: 16px; font-family: Arial, sans-serif;
-    }
-    footer {
-      padding: 35px 20px; background: rgba(3,8,20,.92);
-      border-top: 1px solid rgba(246,200,76,.25);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Federazione Galattica dei Mondi</title>
+<style>
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Georgia,"Times New Roman",serif;color:#fff7dc;background:#050b18;text-align:center}
+header{position:fixed;top:0;left:0;width:100%;z-index:20;background:rgba(3,8,20,.82);border-bottom:1px solid rgba(246,200,76,.35);padding:13px 15px}
+nav{display:flex;justify-content:center;flex-wrap:wrap;gap:14px}
+nav a{color:#f6c84c;text-decoration:none;font-weight:bold;font-size:15px;padding:7px 10px;border-radius:999px}
+nav a:hover{background:rgba(246,200,76,.15)}
+.hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.08),rgba(0,0,0,.35)),url("FederazioneGalatticadeiMondi Immagine Sito.jpeg") center/cover no-repeat;display:flex;align-items:flex-end;justify-content:center;padding:88px 20px 38px}
+.hero-panel{max-width:980px;width:100%;background:rgba(3,8,20,.48);border:1px solid rgba(246,200,76,.35);border-radius:24px;padding:22px;box-shadow:0 0 40px rgba(0,0,0,.55)}
+h1{color:#f6c84c;font-size:clamp(34px,6vw,70px);line-height:1.05;margin:0 0 12px;text-shadow:0 0 18px rgba(246,200,76,.45)}
+.subtitle{font-size:clamp(17px,2.4vw,26px);font-weight:bold;margin:0 auto 16px;max-width:900px}
+.button{display:inline-block;padding:14px 28px;border-radius:999px;background:linear-gradient(135deg,#f6c84c,#b88720);color:#061020;text-decoration:none;font-weight:bold}
+section{padding:75px 20px;background:linear-gradient(rgba(5,11,24,.88),rgba(5,11,24,.92)),url("FederazioneGalatticadeiMondi Immagine Sito.jpeg") center/cover fixed no-repeat}
+.box{max-width:1040px;margin:0 auto;padding:34px 28px;background:rgba(5,13,31,.78);border:1px solid rgba(246,200,76,.32);border-radius:24px;box-shadow:0 0 34px rgba(0,0,0,.45)}
+h2{color:#f6c84c;font-size:clamp(28px,4vw,46px);margin:0 0 20px}
+h3{color:#f6c84c}
+p{font-size:19px;line-height:1.7;max-width:880px;margin:16px auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:30px}
+.card{padding:22px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(246,200,76,.25)}
+form{display:grid;gap:14px;max-width:680px;margin:28px auto 0}
+input,textarea{width:100%;padding:14px 16px;border-radius:12px;border:1px solid rgba(246,200,76,.55);background:rgba(255,255,255,.92);font-size:16px;font-family:Arial,sans-serif}
+button{border:none;border-radius:12px;padding:15px;background:linear-gradient(135deg,#f6c84c,#b88720);color:#061020;font-weight:bold;font-size:17px;cursor:pointer}
+footer{background:rgba(3,8,20,.95);border-top:1px solid rgba(246,200,76,.25);padding:34px 20px;color:rgba(255,247,220,.82)}
+@media(max-width:720px){nav{gap:5px}nav a{font-size:12px;padding:6px 7px}.hero{min-height:92vh;padding-top:110px}.hero-panel,.box{padding:22px 16px}}
+</style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#federazione">La Federazione</a>
-      <a href="#principi">I nostri principi</a>
-      <a href="#storia">La nostra storia</a>
-      <a href="#cause">Le nostre cause</a>
-      <a href="#eventi">Eventi</a>
-      <a href="#contatti">Contatti</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-card">
-        <img src="FederazioneGalatticadeiMondi Immagine Sito.jpeg" alt="Logo Federazione Galattica dei Mondi">
-        <h1>Federazione Galattica dei Mondi</h1>
-        <p class="subtitle">Per una nuova civiltà fondata su pace, giustizia, verità e conoscenza.</p>
-        <a class="button" href="#contatti">Entra nella Federazione</a>
-      </div>
-    </section>
-
-    <section id="federazione">
-      <div class="box">
-        <h2>La Federazione</h2>
-        <p>La Federazione Galattica dei Mondi nasce come spazio di unione, visione e costruzione: un progetto aperto a persone, idee e iniziative orientate a un futuro più giusto, consapevole e libero.</p>
-        <p>Il suo obiettivo è creare una comunità capace di promuovere pace, responsabilità, evoluzione culturale, rispetto della vita e collaborazione tra popoli.</p>
-      </div>
-    </section>
-
-    <section id="principi">
-      <div class="box">
-        <h2>I nostri principi</h2>
-        <div class="grid">
-          <div class="card"><h3>Pace</h3><p>Costruire ponti, non muri. Cercare soluzioni che uniscano invece di dividere.</p></div>
-          <div class="card"><h3>Giustizia</h3><p>Difendere la dignità delle persone, la verità e il diritto a essere ascoltati.</p></div>
-          <div class="card"><h3>Conoscenza</h3><p>Promuovere studio, tecnologia, ricerca, educazione e consapevolezza.</p></div>
-          <div class="card"><h3>Libertà</h3><p>Sostenere autonomia, responsabilità personale e partecipazione attiva.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="storia">
-      <div class="box">
-        <h2>La nostra storia</h2>
-        <p>Ogni grande progetto nasce da una visione. La Federazione vuole collegare memoria, civiltà antiche, futuro tecnologico e aspirazione spirituale verso una nuova alleanza tra persone, popoli e mondi.</p>
-      </div>
-    </section>
-
-    <section id="cause">
-      <div class="box">
-        <h2>Le nostre cause</h2>
-        <div class="grid">
-          <div class="card"><h3>Educazione</h3><p>Una scuola più libera, creativa, pratica e capace di formare persone complete.</p></div>
-          <div class="card"><h3>Ambiente e vita</h3><p>Rispetto della natura, degli animali e degli equilibri fondamentali della Terra.</p></div>
-          <div class="card"><h3>Innovazione</h3><p>Uso etico dell’intelligenza artificiale, della tecnologia e della ricerca scientifica.</p></div>
-          <div class="card"><h3>Diritti</h3><p>Difesa dei più fragili, delle famiglie, dei minori e di chi non viene ascoltato.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="eventi">
-      <div class="box">
-        <h2>Eventi</h2>
-        <p>In questa area saranno pubblicati incontri, comunicazioni ufficiali, iniziative pubbliche, conferenze, presentazioni e aggiornamenti del progetto.</p>
-      </div>
-    </section>
-
-    <section id="contatti">
-      <div class="box">
-        <h2>Contattaci</h2>
-        <p>Aderisci al progetto, proponi iniziative o richiedi informazioni.</p>
-        <form>
-          <input type="text" placeholder="Nome">
-          <input type="email" placeholder="Email">
-          <textarea rows="5" placeholder="Scrivi il tuo messaggio"></textarea>
-          <button type="submit">Invia richiesta</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer>© 2026 Federazione Galattica dei Mondi — Pace, Giustizia, Verità.</footer>
+<header><nav>
+<a href="#home">Home</a><a href="#federazione">La Federazione</a><a href="#principi">I nostri principi</a><a href="#storia">La nostra storia</a><a href="#cause">Le nostre cause</a><a href="#eventi">Eventi</a><a href="#contatti">Contatti</a>
+</nav></header>
+<main>
+<section id="home" class="hero"><div class="hero-panel"><h1>Federazione Galattica dei Mondi</h1><p class="subtitle">Per una nuova civiltà fondata su pace, giustizia, verità e conoscenza.</p><a class="button" href="#contatti">Entra nella Federazione</a></div></section>
+<section id="federazione"><div class="box"><h2>La Federazione</h2><p>La Federazione Galattica dei Mondi nasce come spazio di unione, visione e costruzione: un progetto aperto a persone, idee e iniziative orientate a un futuro più giusto, consapevole e libero.</p><p>Il suo obiettivo è creare una comunità capace di promuovere pace, responsabilità, evoluzione culturale, rispetto della vita e collaborazione tra popoli.</p></div></section>
+<section id="principi"><div class="box"><h2>I nostri principi</h2><div class="grid"><div class="card"><h3>Pace</h3><p>Costruire ponti, non muri. Cercare soluzioni che uniscano invece di dividere.</p></div><div class="card"><h3>Giustizia</h3><p>Difendere la dignità delle persone, la verità e il diritto a essere ascoltati.</p></div><div class="card"><h3>Conoscenza</h3><p>Promuovere studio, tecnologia, ricerca, educazione e consapevolezza.</p></div><div class="card"><h3>Libertà</h3><p>Sostenere autonomia, responsabilità personale e partecipazione attiva.</p></div></div></div></section>
+<section id="storia"><div class="box"><h2>La nostra storia</h2><p>Ogni grande progetto nasce da una visione. La Federazione vuole collegare memoria, civiltà antiche, futuro tecnologico e aspirazione spirituale verso una nuova alleanza tra persone, popoli e mondi.</p></div></section>
+<section id="cause"><div class="box"><h2>Le nostre cause</h2><div class="grid"><div class="card"><h3>Educazione</h3><p>Una scuola più libera, creativa, pratica e capace di formare persone complete.</p></div><div class="card"><h3>Ambiente e vita</h3><p>Rispetto della natura, degli animali e degli equilibri fondamentali della Terra.</p></div><div class="card"><h3>Innovazione</h3><p>Uso etico dell’intelligenza artificiale, della tecnologia e della ricerca scientifica.</p></div><div class="card"><h3>Diritti</h3><p>Difesa dei più fragili, delle famiglie, dei minori e di chi non viene ascoltato.</p></div></div></div></section>
+<section id="eventi"><div class="box"><h2>Eventi</h2><p>In questa area saranno pubblicati incontri, comunicazioni ufficiali, iniziative pubbliche, conferenze, presentazioni e aggiornamenti del progetto.</p></div></section>
+<section id="contatti"><div class="box"><h2>Contattaci</h2><p>Aderisci al progetto, proponi iniziative o richiedi informazioni.</p><form><input type="text" placeholder="Nome"><input type="email" placeholder="Email"><textarea rows="5" placeholder="Scrivi il tuo messaggio"></textarea><button type="submit">Invia richiesta</button></form></div></section>
+</main><footer>© 2026 Federazione Galattica dei Mondi — Pace, Giustizia, Verità.</footer>
 </body>
 </html>
