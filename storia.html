@@ -15,14 +15,14 @@ html{scroll-behavior:smooth}
 body{margin:0;background:#020713;color:var(--cream);font-family:'Cormorant Garamond',Georgia,serif;overflow-x:hidden}
 a{color:inherit}
 .site-header{position:sticky;top:0;z-index:999;background:rgba(2,7,19,.96);border-bottom:1px solid rgba(255,215,92,.36);backdrop-filter:blur(10px)}
-.header-inner{max-width:1440px;margin:auto;display:flex;align-items:center;gap:18px;padding:10px 20px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:260px}
-.brand img{width:58px;height:58px;border-radius:50%;object-fit:cover;border:1px solid var(--gold);box-shadow:0 0 20px rgba(255,215,92,.35)}
-.brand-text{font-family:'Cinzel',serif;color:var(--gold);font-weight:700;line-height:1.12;font-size:16px}
+.header-inner{max-width:1540px;margin:auto;display:flex;align-items:center;gap:22px;padding:13px 24px}
+.brand{display:flex;align-items:center;gap:15px;text-decoration:none;min-width:330px}
+.brand img{width:78px;height:78px;border-radius:50%;object-fit:cover;border:1px solid var(--gold);box-shadow:0 0 24px rgba(255,215,92,.45)}
+.brand-text{font-family:'Cinzel',serif;color:#f3cf70;font-weight:700;line-height:1.13;font-size:19px;letter-spacing:.15px;-webkit-text-stroke:.28px #8b5b16;text-shadow:0 1px 0 #6e4510,0 0 9px rgba(255,215,92,.24)}
 .nav-toggle{display:none}
 .menu-button{display:none;color:var(--gold);font-size:27px;cursor:pointer;margin-left:auto}
 .nav{margin-left:auto;display:flex;align-items:center;flex-wrap:wrap;justify-content:flex-end}
-.nav a{font-family:'Cinzel',serif;text-decoration:none;color:#f9e6a6;font-size:11px;font-weight:700;padding:10px 8px;border-radius:8px}
+.nav a{font-family:'Cinzel',serif;text-decoration:none;color:#f2d783;font-size:12px;font-weight:700;padding:11px 8px;border-radius:8px;letter-spacing:.08px;-webkit-text-stroke:.18px #765015;text-shadow:0 1px 0 rgba(38,19,0,.92),0 0 7px rgba(255,213,88,.17)}
 .nav a:hover,.nav a:focus{background:rgba(255,215,92,.10);color:#fff4be;outline:none}
 .nav .cta{border:1px solid rgba(255,215,92,.62);margin-left:6px;padding:10px 13px}
 .hero{min-height:86vh;display:flex;align-items:center;position:relative;background-position:center;background-size:cover;isolation:isolate}
@@ -30,7 +30,7 @@ a{color:inherit}
 .hero:after{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.80) 1px,transparent 1.5px),radial-gradient(circle,rgba(255,214,95,.55) 1px,transparent 1.4px);background-size:88px 88px,137px 137px;background-position:0 0,40px 31px;opacity:.20;z-index:-1;pointer-events:none}
 .hero-content{width:min(1200px,92%);margin:auto;padding:78px 0}
 .eyebrow{font-family:'Cinzel',serif;color:#ffe798;text-transform:uppercase;letter-spacing:2.4px;font-size:13px}
-h1,h2,h3{font-family:'Cinzel',serif;color:var(--gold);text-shadow:0 0 26px rgba(255,207,70,.20)}
+h1,h2,h3{font-family:'Cinzel',serif;color:#f3ce69;-webkit-text-stroke:.35px #805313;text-shadow:0 1px 0 #6b430d,0 2px 2px rgba(0,0,0,.58),0 0 18px rgba(255,207,70,.18)}
 h1{font-size:clamp(43px,6.5vw,92px);line-height:1.02;margin:10px 0 20px;max-width:1050px}
 h2{font-size:clamp(30px,4.5vw,58px);line-height:1.15}
 h3{font-size:clamp(20px,2.3vw,29px)}
@@ -82,12 +82,132 @@ hr.gold{border:0;border-top:1px solid rgba(255,215,92,.36);margin:35px 0}
  .hero{min-height:76vh}.hero-content{padding:55px 0}
 }
 @media(max-width:640px){
- .brand img{width:47px;height:47px}.brand-text{font-size:13px}
+ .brand img{width:56px;height:56px}.brand-text{font-size:14px}.brand{min-width:auto}
  h1{font-size:39px}p{font-size:18px}.lead{font-size:21px}
  .section{padding:60px 13px}.panel{padding:25px 16px}
  .actions{gap:7px}.button{font-size:11px;padding:12px 15px}
  .image-card img{height:175px}
 }
+
+/* Sezione istituzionale dedicata al simbolo */
+.symbol-intro{position:relative;min-height:clamp(570px,78vh,900px);display:flex;align-items:flex-end;justify-content:center;background:url('images/simbolo-federazione.jpg') center/cover no-repeat;border-bottom:1px solid rgba(255,215,92,.42);isolation:isolate}
+.symbol-intro:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,7,19,.05) 0%,rgba(2,7,19,.08) 52%,rgba(2,7,19,.90) 100%);z-index:-1}
+.symbol-intro-copy{width:min(1120px,92%);text-align:center;padding:48px 20px 54px}
+.symbol-intro-copy h1{font-size:clamp(31px,4.2vw,62px);margin:0 0 10px;line-height:1.08}
+.symbol-intro-copy p{font-family:'Cinzel',serif;color:#f5df9a;letter-spacing:1.2px;font-size:clamp(14px,1.5vw,21px);margin:0}
+.symbol-link{display:inline-flex;margin-top:22px}
+.symbol-page{min-height:calc(100vh - 105px);display:flex;align-items:center;background:linear-gradient(rgba(2,7,19,.18),rgba(2,7,19,.84)),url('images/simbolo-federazione.jpg') center/cover no-repeat;padding:80px 20px}
+.symbol-page .panel{max-width:920px;margin:0 auto;text-align:center;background:linear-gradient(145deg,rgba(2,8,22,.56),rgba(23,12,3,.56))}
+.symbol-page h1{margin-top:0}
+.symbol-page p{max-width:760px;margin:0 auto 18px}
+.principle-icon{width:52px;height:52px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;border:1px solid rgba(255,215,92,.48);border-radius:50%;background:radial-gradient(circle,rgba(255,215,92,.13),rgba(4,12,28,.72));box-shadow:0 0 18px rgba(255,203,74,.14)}
+.principle-icon svg{width:30px;height:30px;stroke:#f1cb68;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 4px rgba(255,207,80,.22))}
+@media(max-width:1180px){.brand{min-width:285px}.brand img{width:68px;height:68px}.brand-text{font-size:17px}.nav a{font-size:11px;padding:10px 6px}}
+@media(max-width:1000px){.symbol-intro{min-height:650px}.header-inner{padding:10px 16px}}
+@media(max-width:640px){.symbol-intro{min-height:520px;background-position:center}.symbol-intro-copy{padding-bottom:36px}.symbol-intro-copy h1{font-size:31px}.symbol-page{padding:55px 13px}}
+
+
+/* === Migliorie finali Versione 12 === */
+h1,h2,h3,.brand-text,.nav a,.eyebrow,.ribbon{
+  color:#f4d678;
+  -webkit-text-stroke:.42px rgba(109,67,9,.92);
+  text-shadow:
+    0 1px 0 #6e4309,
+    0 2px 0 rgba(60,31,0,.68),
+    0 0 1px #fff3b0,
+    0 0 12px rgba(255,211,87,.20);
+}
+h1,h2{letter-spacing:.35px}
+.card h3{letter-spacing:.2px}
+
+.principle-icon,.mission-icon{
+  width:58px;height:58px;display:flex;align-items:center;justify-content:center;
+  margin-bottom:14px;border:1px solid rgba(255,216,96,.72);border-radius:50%;
+  background:
+    radial-gradient(circle at 35% 30%,rgba(255,244,188,.22),transparent 26%),
+    radial-gradient(circle,rgba(255,215,92,.13),rgba(4,12,28,.82));
+  box-shadow:
+    inset 0 0 0 2px rgba(164,103,15,.24),
+    0 0 20px rgba(255,203,74,.16);
+}
+.principle-icon svg,.mission-icon svg{
+  width:33px;height:33px;stroke:#f2cd70;fill:none;stroke-width:1.65;
+  stroke-linecap:round;stroke-linejoin:round;
+  filter:drop-shadow(0 1px 0 #6a4107) drop-shadow(0 0 4px rgba(255,215,92,.24));
+}
+.card .icon{display:none}
+
+.gold-title-frame{
+  display:inline-block;padding:.16em .48em;border:1px solid rgba(255,215,92,.55);
+  border-radius:12px;background:linear-gradient(180deg,rgba(255,215,92,.06),rgba(255,215,92,.01));
+  box-shadow:inset 0 0 18px rgba(255,215,92,.05),0 0 16px rgba(255,215,92,.06);
+}
+
+.nature-vision{
+  min-height:680px;background:url('images/immagine-13-terra-natura.jpg') center/cover no-repeat;
+}
+.nature-vision:before{
+  background:linear-gradient(90deg,rgba(1,8,14,.86) 0%,rgba(1,10,17,.52) 46%,rgba(1,8,14,.20) 100%);
+}
+.nature-copy{
+  max-width:680px;padding:42px;border:1px solid rgba(255,215,92,.48);
+  border-radius:25px;background:linear-gradient(145deg,rgba(2,12,18,.76),rgba(15,38,24,.58));
+  box-shadow:0 0 42px rgba(0,0,0,.38),inset 0 0 24px rgba(105,210,113,.05);
+  backdrop-filter:blur(4px);
+}
+.nature-copy h2{color:#dff29a;-webkit-text-stroke:.35px #48651c}
+.eco-points{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:24px}
+.eco-point{border:1px solid rgba(183,235,137,.34);border-radius:16px;padding:14px;background:rgba(7,31,18,.55);font-size:16px}
+
+.structure-bright:before{
+  background:linear-gradient(180deg,rgba(2,7,19,.48),rgba(2,7,19,.76));
+}
+.structure-bright{
+  background-position:center 36%!important;
+}
+.structure-bright .panel{
+  background:linear-gradient(145deg,rgba(4,17,43,.72),rgba(28,17,7,.46));
+  border-color:rgba(255,215,92,.52);
+}
+
+.future-bright:before{
+  background:linear-gradient(180deg,rgba(2,7,19,.42),rgba(2,7,19,.72));
+}
+.future-bright{
+  background-position:center 42%!important;
+}
+.future-bright .panel{
+  background:linear-gradient(145deg,rgba(6,23,50,.66),rgba(33,20,6,.42));
+}
+
+.prestige-heading{
+  text-align:center;margin-bottom:28px;padding:15px 22px;
+  border:1px solid rgba(255,215,92,.65);border-radius:16px;
+  background:linear-gradient(90deg,transparent,rgba(255,215,92,.09),transparent);
+  box-shadow:inset 0 0 22px rgba(255,215,92,.05);
+}
+.honor-mission-card{
+  position:relative;border:2px solid rgba(255,215,92,.68);
+  background:linear-gradient(145deg,rgba(28,18,5,.88),rgba(4,14,31,.92));
+  box-shadow:0 0 32px rgba(255,195,62,.10),inset 0 0 0 4px rgba(255,215,92,.055);
+}
+.honor-mission-card:before,.honor-mission-card:after{
+  content:"✦";position:absolute;color:#f3ce69;font-size:19px;text-shadow:0 0 8px rgba(255,215,92,.35)
+}
+.honor-mission-card:before{top:10px;left:13px}
+.honor-mission-card:after{bottom:10px;right:13px}
+.honor-mission-card .tag{
+  display:inline-block;border:1px solid rgba(255,215,92,.44);border-radius:999px;
+  padding:6px 11px;color:#f4dc94;background:rgba(255,215,92,.06);
+}
+.ordinary-heading{
+  text-align:center;margin-top:58px!important;opacity:.94;
+}
+@media(max-width:700px){
+  .nature-vision{min-height:760px;background-position:62% center}
+  .nature-copy{padding:26px 18px}
+}
+
 </style>
 </head>
 <body>
@@ -100,7 +220,7 @@ hr.gold{border:0;border-top:1px solid rgba(255,215,92,.36);margin:35px 0}
     </a>
     <input class="nav-toggle" id="nav-toggle" type="checkbox">
     <label class="menu-button" for="nav-toggle" aria-label="Apri il menu">☰</label>
-    <nav class="nav" aria-label="Navigazione principale"><a class="" href="index.html">Home</a><a class="" href="federazione.html">La Federazione</a><a class="" href="principi.html">Principi</a><a class="" href="storia.html" aria-current="page">Storia</a><a class="" href="missione.html">Missioni</a><a class="" href="membri-onorari.html">Sala d’Onore</a><a class="cta" href="adesione.html">Adesione</a><a class="" href="contatti.html">Contatti</a></nav>
+    <nav class="nav" aria-label="Navigazione principale"><a class="" href="index.html">Home</a><a class="" href="federazione.html">La Federazione</a><a class="" href="simbolo.html">Il Simbolo</a><a class="" href="principi.html">Principi</a><a class="" href="storia.html" aria-current="page">Storia</a><a class="" href="missione.html">Missioni</a><a class="" href="membri-onorari.html">Sala d’Onore</a><a class="cta" href="adesione.html">Adesione</a><a class="" href="contatti.html">Contatti</a></nav>
   </div>
 </header>
 
@@ -111,7 +231,7 @@ hr.gold{border:0;border-top:1px solid rgba(255,215,92,.36);margin:35px 0}
 </section>
 <section class="section stars" style="background-image:url('images/immagine-02.jpg')">
  <div class="container panel">
-  <h2>Un cammino in costruzione</h2>
+  <h2><span class="gold-title-frame">Un cammino in costruzione</span></h2>
   <p>La Federazione nasce dall’incontro tra domande antiche e sfide contemporanee: pace, giustizia, rapporto con il pianeta, conoscenza, spiritualità, tecnologia e futuro dell’umanità.</p>
   <div class="grid">
    <div class="card"><h3>Memoria</h3><p>Studiare civiltà, tradizioni, simboli, testimonianze e opere che hanno aperto nuove prospettive.</p></div>
@@ -123,7 +243,7 @@ hr.gold{border:0;border-top:1px solid rgba(255,215,92,.36);margin:35px 0}
 
 
 <footer class="footer">
-  <h2>Federazione Galattica dei Mondi</h2>
+  <h2><span class="gold-title-frame">Federazione Galattica dei Mondi</span></h2>
   <p>Centro di riferimento: <strong>Pianeta Terra</strong></p>
   <p class="email"><a href="mailto:federazionegalatticadeimondi@gmail.com">federazionegalatticadeimondi@gmail.com</a></p>
   <p class="small">Pace · Giustizia · Verità · Conoscenza · Tutela della vita · Cooperazione</p>
