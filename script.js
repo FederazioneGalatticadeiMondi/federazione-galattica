@@ -1,5 +1,1 @@
-
-document.addEventListener('DOMContentLoaded',()=>{
- const f=(location.pathname.split('/').pop()||'index.html').toLowerCase();
- document.querySelectorAll('nav a').forEach(a=>{if((a.getAttribute('href')||'').toLowerCase()===f)a.classList.add('active')});
-});
+document.addEventListener('DOMContentLoaded',()=>{const current=location.pathname.split('/').pop()||'index.html';document.querySelectorAll('nav a').forEach(a=>{if(a.getAttribute('href')===current)a.classList.add('active')});document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>{const t=document.getElementById(a.getAttribute('href').slice(1));if(t)t.scrollIntoView({behavior:'smooth'})}))});
