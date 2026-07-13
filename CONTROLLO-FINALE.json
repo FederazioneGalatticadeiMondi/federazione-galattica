@@ -1,0 +1,34 @@
+{
+  "html_files": [
+    "404.html",
+    "adesione.html",
+    "centro-operativo.html",
+    "comunicazioni.html",
+    "contatti.html",
+    "federazione.html",
+    "index.html",
+    "membri-onorari.html",
+    "missione.html",
+    "missioni.html",
+    "principi.html",
+    "simbolo.html",
+    "storia.html"
+  ],
+  "missing_local_references": [],
+  "images": {
+    "centro-operativo.png": "OK",
+    "home-federazione.png": "OK",
+    "logo-12-stelle.jpg": "OK",
+    "membri-onorari.png": "OK",
+    "missioni-complete.png": "OK",
+    "pionieri.png": "OK",
+    "scienza-futuro.jpg": "OK",
+    "storia-civilta.jpg": "OK",
+    "terra-natura.jpg": "OK"
+  },
+  "required_home": true,
+  "nojekyll": true,
+  "canonical_missions_page": "missioni.html",
+  "legacy_redirect": "missione.html",
+  "logo_note": "logo ritagliato dalla home approvata con 12 stelle nell'anello principale"
+}

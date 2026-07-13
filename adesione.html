@@ -1,54 +1,38 @@
 <!doctype html>
-<html lang="it">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="it"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Adesione | Federazione Galattica dei Mondi</title>
-<meta name="description" content="Sito ufficiale della Federazione Galattica dei Mondi: pace, giustizia, verità, conoscenza, tutela della vita e cooperazione.">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header class="site-header">
-  <a class="brand" href="index.html">
-    <img src="images/logo-12-stelle.webp" alt="Simbolo ufficiale con dodici stelle">
-    <span>Federazione Galattica<br>dei Mondi</span>
-  </a>
-  <button class="menu-btn" type="button" aria-expanded="false" aria-label="Apri il menu">☰</button>
-  <nav class="nav" aria-label="Navigazione principale">
-    <a href="index.html">Home</a>
+<meta name="description" content="Federazione Galattica dei Mondi">
+<link rel="icon" href="images/logo-12-stelle.jpg"><link rel="stylesheet" href="style.css">
+</head><body>
+<header><div class="wrap navbar">
+<a class="brand" href="index.html"><img src="images/logo-12-stelle.jpg" alt="Emblema ufficiale con dodici stelle"><strong>Federazione Galattica<br>dei Mondi</strong></a>
+<input class="menu" id="menu" type="checkbox"><label class="menu-label" for="menu">☰</label>
+<nav>
+<a href="index.html">Home</a>
 <a href="federazione.html">La Federazione</a>
 <a href="simbolo.html">Il Simbolo</a>
 <a href="principi.html">Principi</a>
 <a href="storia.html">Storia</a>
 <a href="missioni.html">Missioni</a>
-<a href="sala-onore.html">Sala d’Onore</a>
-<a href="adesione.html" class="active">Adesione</a>
+<a href="centro-operativo.html">Centro operativo</a>
+<a href="membri-onorari.html">Sala d’Onore</a>
+<a href="adesione.html">Adesione</a>
 <a href="contatti.html">Contatti</a>
-  </nav>
-</header>
-<main class="page">
-  <section class="visual">
-    <img src="images/adesione.webp" alt="Adesione — Federazione Galattica dei Mondi">
-    <a class="hotspot" href="mailto:federazionegalatticadeimondi@gmail.com?subject=Richiesta%20di%20adesione" aria-label="Invia richiesta di adesione" title="Invia richiesta di adesione" style="left:24%;top:76%;width:58%;height:17%"></a>
-  </section>
-  
-        <div class="notice">
-          Puoi partecipare come membro attivo, sostenitore, collaboratore o custode della visione.
-          <p><a href="documenti/Modulo_iscrizione_Federazione_Galattica_dei_Mondi.pdf" download>Scarica il modulo di adesione in PDF</a></p>
-          <p><a href="mailto:federazionegalatticadeimondi@gmail.com?subject=Richiesta%20di%20adesione">Invia la richiesta via email</a></p>
-        </div>
-        
-</main>
-<div class="mobile-actions">
-  <a href="missioni.html">Missioni</a>
-  <a href="adesione.html">Adesione</a>
-  <a href="comunicazioni.html">Comunicazioni</a>
-  <a href="contatti.html">Contatti</a>
-</div>
-<footer class="footer">
-  <strong>Federazione Galattica dei Mondi</strong><br>
-  <a href="mailto:federazionegalatticadeimondi@gmail.com">federazionegalatticadeimondi@gmail.com</a>
-</footer>
-<script src="script.js"></script>
-</body>
-</html>
+</nav></div></header>
+
+<section class="hero" style="background-image:url('images/terra-natura.jpg')"><div class="wrap hero-content"><p class="kicker">Partecipazione</p><h1>Adesione</h1><p class="lead">Condividi valori, competenze o una proposta e chiedi di partecipare al progetto.</p></div></section>
+<section class="blue"><div class="wrap"><h2>Richiesta di adesione</h2>
+<form class="form-grid" action="mailto:federazionegalatticadeimondi@gmail.com" method="post" enctype="text/plain">
+<label>Nome e cognome<input name="Nome" required></label>
+<label>Email<input type="email" name="Email" required></label>
+<label>Tipo di partecipazione<select name="Partecipazione"><option>Membro</option><option>Collaborazione</option><option>Proposta di missione</option><option>Richiesta informazioni</option></select></label>
+<label>Messaggio<textarea name="Messaggio" required></textarea></label>
+<button class="btn" type="submit">Prepara l’email</button>
+</form><p class="small">Il pulsante apre il programma di posta elettronica del dispositivo. In alternativa scrivi direttamente all’indirizzo indicato nei contatti.</p></div></section>
+
+<footer><div class="wrap"><h3>Federazione Galattica dei Mondi</h3>
+<p>Centro di riferimento: Pianeta Terra</p>
+<p><a href="mailto:federazionegalatticadeimondi@gmail.com">federazionegalatticadeimondi@gmail.com</a></p>
+<p class="small">Pace · Giustizia · Verità · Conoscenza · Tutela della vita · Cooperazione</p></div></footer>
+<script src="script.js"></script></body></html>
