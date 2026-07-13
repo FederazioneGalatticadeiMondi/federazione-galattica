@@ -3,260 +3,46 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#020713">
 <title>Sala d’Onore | Federazione Galattica dei Mondi</title>
-<meta name="description" content="Membri Onorari e memoria delle grandi menti.">
-<link rel="icon" href="images/immagine-01.jpg">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap');
-:root{--gold:#ffd75c;--gold2:#c8861c;--ink:#020713;--cream:#fff7e7;--cyan:#65d6ff;--violet:#bd83ff;}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:#020713;color:var(--cream);font-family:'Cormorant Garamond',Georgia,serif;overflow-x:hidden}
-a{color:inherit}
-.site-header{position:sticky;top:0;z-index:999;background:rgba(2,7,19,.96);border-bottom:1px solid rgba(255,215,92,.36);backdrop-filter:blur(10px)}
-.header-inner{max-width:1540px;margin:auto;display:flex;align-items:center;gap:22px;padding:13px 24px}
-.brand{display:flex;align-items:center;gap:15px;text-decoration:none;min-width:330px}
-.brand img{width:78px;height:78px;border-radius:50%;object-fit:cover;border:1px solid var(--gold);box-shadow:0 0 24px rgba(255,215,92,.45)}
-.brand-text{font-family:'Cinzel',serif;color:#f3cf70;font-weight:700;line-height:1.13;font-size:19px;letter-spacing:.15px;-webkit-text-stroke:.28px #8b5b16;text-shadow:0 1px 0 #6e4510,0 0 9px rgba(255,215,92,.24)}
-.nav-toggle{display:none}
-.menu-button{display:none;color:var(--gold);font-size:27px;cursor:pointer;margin-left:auto}
-.nav{margin-left:auto;display:flex;align-items:center;flex-wrap:wrap;justify-content:flex-end}
-.nav a{font-family:'Cinzel',serif;text-decoration:none;color:#f2d783;font-size:12px;font-weight:700;padding:11px 8px;border-radius:8px;letter-spacing:.08px;-webkit-text-stroke:.18px #765015;text-shadow:0 1px 0 rgba(38,19,0,.92),0 0 7px rgba(255,213,88,.17)}
-.nav a:hover,.nav a:focus{background:rgba(255,215,92,.10);color:#fff4be;outline:none}
-.nav .cta{border:1px solid rgba(255,215,92,.62);margin-left:6px;padding:10px 13px}
-.hero{min-height:86vh;display:flex;align-items:center;position:relative;background-position:center;background-size:cover;isolation:isolate}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(1,5,15,.92) 0%,rgba(2,8,22,.63) 48%,rgba(2,7,19,.30) 100%);z-index:-1}
-.hero:after{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.80) 1px,transparent 1.5px),radial-gradient(circle,rgba(255,214,95,.55) 1px,transparent 1.4px);background-size:88px 88px,137px 137px;background-position:0 0,40px 31px;opacity:.20;z-index:-1;pointer-events:none}
-.hero-content{width:min(1200px,92%);margin:auto;padding:78px 0}
-.eyebrow{font-family:'Cinzel',serif;color:#ffe798;text-transform:uppercase;letter-spacing:2.4px;font-size:13px}
-h1,h2,h3{font-family:'Cinzel',serif;color:#f3ce69;-webkit-text-stroke:.35px #805313;text-shadow:0 1px 0 #6b430d,0 2px 2px rgba(0,0,0,.58),0 0 18px rgba(255,207,70,.18)}
-h1{font-size:clamp(43px,6.5vw,92px);line-height:1.02;margin:10px 0 20px;max-width:1050px}
-h2{font-size:clamp(30px,4.5vw,58px);line-height:1.15}
-h3{font-size:clamp(20px,2.3vw,29px)}
-p{font-size:21px;line-height:1.58}
-.lead{max-width:850px;font-size:clamp(21px,2.2vw,31px)}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
-.button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-family:'Cinzel',serif;font-size:13px;font-weight:800;letter-spacing:.3px;padding:14px 22px;border-radius:999px;border:1px solid rgba(255,236,170,.68);background:linear-gradient(135deg,#fff0a6,#ffd24b 45%,#ad6c0a);color:#07101e;box-shadow:0 0 26px rgba(255,209,63,.20);cursor:pointer;position:relative;z-index:5}
-.button:hover,.button:focus{transform:translateY(-2px);filter:brightness(1.08);outline:2px solid rgba(255,255,255,.30);outline-offset:2px}
-.button.secondary{background:rgba(3,10,25,.88);color:var(--gold);border-color:rgba(255,215,92,.72)}
-.section{position:relative;padding:86px 20px;background-size:cover;background-position:center;isolation:isolate}
-.section:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,7,19,.72),rgba(2,7,19,.91));z-index:-1}
-.section.stars:after{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.75) 1px,transparent 1.4px),radial-gradient(circle,rgba(111,211,255,.45) 1px,transparent 1.5px);background-size:72px 72px,121px 121px;background-position:0 0,26px 38px;opacity:.28;z-index:-1}
-.container{max-width:1240px;margin:auto}
-.center{text-align:center}
-.panel{background:linear-gradient(145deg,rgba(4,14,34,.82),rgba(40,19,5,.48));border:1px solid rgba(255,215,92,.38);border-radius:26px;padding:36px;box-shadow:0 0 42px rgba(0,0,0,.38);backdrop-filter:blur(5px)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:20px}
-.card{background:linear-gradient(145deg,rgba(5,17,39,.86),rgba(41,18,7,.56));border:1px solid rgba(255,215,92,.35);border-radius:21px;padding:25px;box-shadow:0 0 25px rgba(0,0,0,.26)}
-.card p{font-size:18px}
-.card .tag{font-family:'Cinzel',serif;color:#8edfff;font-size:11px;letter-spacing:1px;text-transform:uppercase}
-.icon{font-size:39px;display:block;margin-bottom:9px}
-.image-card{padding:0;overflow:hidden}
-.image-card img{display:block;width:100%;height:210px;object-fit:cover}
-.image-card .body{padding:23px}
-.visual-frame{border:1px solid rgba(255,215,92,.47);border-radius:24px;overflow:hidden;box-shadow:0 0 45px rgba(60,174,255,.18);background:#020713}
-.visual-frame img{width:100%;height:auto;display:block}
-.ribbon{font-family:'Cinzel',serif;color:#ffe28b;letter-spacing:1.6px;text-transform:uppercase;text-align:center;margin:12px 0 28px}
-.quote{font-size:clamp(25px,3vw,42px);font-style:italic;max-width:1000px;margin:0 auto}
-.status{display:inline-block;font-family:'Cinzel',serif;font-size:10px;color:#07101e;padding:6px 10px;border-radius:999px;background:linear-gradient(135deg,#9efee7,#62cfff);margin-bottom:7px}
-.status.gold{background:linear-gradient(135deg,#fff0a4,#e9ad30)}
-.status.violet{background:linear-gradient(135deg,#efc0ff,#a376ff)}
-.status.green{background:linear-gradient(135deg,#d2ffac,#60df7b)}
-.notice{border-left:3px solid var(--gold);padding:12px 16px;background:rgba(255,215,92,.06);font-size:16px}
-.list-clean{list-style:none;padding:0;margin:0}
-.list-clean li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.09);font-size:19px}
-.footer{position:relative;text-align:center;padding:58px 20px;background:linear-gradient(rgba(2,7,19,.72),rgba(2,7,19,.95)),url('images/immagine-02.jpg') center/cover;border-top:1px solid rgba(255,215,92,.36)}
-.footer:after{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.72) 1px,transparent 1.3px);background-size:65px 65px;opacity:.22;pointer-events:none}
-.footer>*{position:relative;z-index:1}
-.footer p{font-size:18px}
-.small{font-size:15px!important;opacity:.82}
-hr.gold{border:0;border-top:1px solid rgba(255,215,92,.36);margin:35px 0}
-.email{overflow-wrap:anywhere}
-@media(max-width:1000px){
- .header-inner{flex-wrap:wrap}.brand{min-width:auto}
- .menu-button{display:block}
- .nav{display:none;width:100%;margin:0;flex-direction:column;align-items:stretch}
- .nav a{font-size:12px;text-align:center;border-top:1px solid rgba(255,255,255,.06)}
- .nav-toggle:checked~.nav{display:flex}
- .nav .cta{margin:0;border-radius:0}
- .hero{min-height:76vh}.hero-content{padding:55px 0}
-}
-@media(max-width:640px){
- .brand img{width:56px;height:56px}.brand-text{font-size:14px}.brand{min-width:auto}
- h1{font-size:39px}p{font-size:18px}.lead{font-size:21px}
- .section{padding:60px 13px}.panel{padding:25px 16px}
- .actions{gap:7px}.button{font-size:11px;padding:12px 15px}
- .image-card img{height:175px}
-}
-
-/* Sezione istituzionale dedicata al simbolo */
-.symbol-intro{position:relative;min-height:clamp(570px,78vh,900px);display:flex;align-items:flex-end;justify-content:center;background:url('images/simbolo-federazione.jpg') center/cover no-repeat;border-bottom:1px solid rgba(255,215,92,.42);isolation:isolate}
-.symbol-intro:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,7,19,.05) 0%,rgba(2,7,19,.08) 52%,rgba(2,7,19,.90) 100%);z-index:-1}
-.symbol-intro-copy{width:min(1120px,92%);text-align:center;padding:48px 20px 54px}
-.symbol-intro-copy h1{font-size:clamp(31px,4.2vw,62px);margin:0 0 10px;line-height:1.08}
-.symbol-intro-copy p{font-family:'Cinzel',serif;color:#f5df9a;letter-spacing:1.2px;font-size:clamp(14px,1.5vw,21px);margin:0}
-.symbol-link{display:inline-flex;margin-top:22px}
-.symbol-page{min-height:calc(100vh - 105px);display:flex;align-items:center;background:linear-gradient(rgba(2,7,19,.18),rgba(2,7,19,.84)),url('images/simbolo-federazione.jpg') center/cover no-repeat;padding:80px 20px}
-.symbol-page .panel{max-width:920px;margin:0 auto;text-align:center;background:linear-gradient(145deg,rgba(2,8,22,.56),rgba(23,12,3,.56))}
-.symbol-page h1{margin-top:0}
-.symbol-page p{max-width:760px;margin:0 auto 18px}
-.principle-icon{width:52px;height:52px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;border:1px solid rgba(255,215,92,.48);border-radius:50%;background:radial-gradient(circle,rgba(255,215,92,.13),rgba(4,12,28,.72));box-shadow:0 0 18px rgba(255,203,74,.14)}
-.principle-icon svg{width:30px;height:30px;stroke:#f1cb68;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 4px rgba(255,207,80,.22))}
-@media(max-width:1180px){.brand{min-width:285px}.brand img{width:68px;height:68px}.brand-text{font-size:17px}.nav a{font-size:11px;padding:10px 6px}}
-@media(max-width:1000px){.symbol-intro{min-height:650px}.header-inner{padding:10px 16px}}
-@media(max-width:640px){.symbol-intro{min-height:520px;background-position:center}.symbol-intro-copy{padding-bottom:36px}.symbol-intro-copy h1{font-size:31px}.symbol-page{padding:55px 13px}}
-
-
-/* === Migliorie finali Versione 12 === */
-h1,h2,h3,.brand-text,.nav a,.eyebrow,.ribbon{
-  color:#f4d678;
-  -webkit-text-stroke:.42px rgba(109,67,9,.92);
-  text-shadow:
-    0 1px 0 #6e4309,
-    0 2px 0 rgba(60,31,0,.68),
-    0 0 1px #fff3b0,
-    0 0 12px rgba(255,211,87,.20);
-}
-h1,h2{letter-spacing:.35px}
-.card h3{letter-spacing:.2px}
-
-.principle-icon,.mission-icon{
-  width:58px;height:58px;display:flex;align-items:center;justify-content:center;
-  margin-bottom:14px;border:1px solid rgba(255,216,96,.72);border-radius:50%;
-  background:
-    radial-gradient(circle at 35% 30%,rgba(255,244,188,.22),transparent 26%),
-    radial-gradient(circle,rgba(255,215,92,.13),rgba(4,12,28,.82));
-  box-shadow:
-    inset 0 0 0 2px rgba(164,103,15,.24),
-    0 0 20px rgba(255,203,74,.16);
-}
-.principle-icon svg,.mission-icon svg{
-  width:33px;height:33px;stroke:#f2cd70;fill:none;stroke-width:1.65;
-  stroke-linecap:round;stroke-linejoin:round;
-  filter:drop-shadow(0 1px 0 #6a4107) drop-shadow(0 0 4px rgba(255,215,92,.24));
-}
-.card .icon{display:none}
-
-.gold-title-frame{
-  display:inline-block;padding:.16em .48em;border:1px solid rgba(255,215,92,.55);
-  border-radius:12px;background:linear-gradient(180deg,rgba(255,215,92,.06),rgba(255,215,92,.01));
-  box-shadow:inset 0 0 18px rgba(255,215,92,.05),0 0 16px rgba(255,215,92,.06);
-}
-
-.nature-vision{
-  min-height:680px;background:url('images/immagine-13-terra-natura.jpg') center/cover no-repeat;
-}
-.nature-vision:before{
-  background:linear-gradient(90deg,rgba(1,8,14,.86) 0%,rgba(1,10,17,.52) 46%,rgba(1,8,14,.20) 100%);
-}
-.nature-copy{
-  max-width:680px;padding:42px;border:1px solid rgba(255,215,92,.48);
-  border-radius:25px;background:linear-gradient(145deg,rgba(2,12,18,.76),rgba(15,38,24,.58));
-  box-shadow:0 0 42px rgba(0,0,0,.38),inset 0 0 24px rgba(105,210,113,.05);
-  backdrop-filter:blur(4px);
-}
-.nature-copy h2{color:#dff29a;-webkit-text-stroke:.35px #48651c}
-.eco-points{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:24px}
-.eco-point{border:1px solid rgba(183,235,137,.34);border-radius:16px;padding:14px;background:rgba(7,31,18,.55);font-size:16px}
-
-.structure-bright:before{
-  background:linear-gradient(180deg,rgba(2,7,19,.48),rgba(2,7,19,.76));
-}
-.structure-bright{
-  background-position:center 36%!important;
-}
-.structure-bright .panel{
-  background:linear-gradient(145deg,rgba(4,17,43,.72),rgba(28,17,7,.46));
-  border-color:rgba(255,215,92,.52);
-}
-
-.future-bright:before{
-  background:linear-gradient(180deg,rgba(2,7,19,.42),rgba(2,7,19,.72));
-}
-.future-bright{
-  background-position:center 42%!important;
-}
-.future-bright .panel{
-  background:linear-gradient(145deg,rgba(6,23,50,.66),rgba(33,20,6,.42));
-}
-
-.prestige-heading{
-  text-align:center;margin-bottom:28px;padding:15px 22px;
-  border:1px solid rgba(255,215,92,.65);border-radius:16px;
-  background:linear-gradient(90deg,transparent,rgba(255,215,92,.09),transparent);
-  box-shadow:inset 0 0 22px rgba(255,215,92,.05);
-}
-.honor-mission-card{
-  position:relative;border:2px solid rgba(255,215,92,.68);
-  background:linear-gradient(145deg,rgba(28,18,5,.88),rgba(4,14,31,.92));
-  box-shadow:0 0 32px rgba(255,195,62,.10),inset 0 0 0 4px rgba(255,215,92,.055);
-}
-.honor-mission-card:before,.honor-mission-card:after{
-  content:"✦";position:absolute;color:#f3ce69;font-size:19px;text-shadow:0 0 8px rgba(255,215,92,.35)
-}
-.honor-mission-card:before{top:10px;left:13px}
-.honor-mission-card:after{bottom:10px;right:13px}
-.honor-mission-card .tag{
-  display:inline-block;border:1px solid rgba(255,215,92,.44);border-radius:999px;
-  padding:6px 11px;color:#f4dc94;background:rgba(255,215,92,.06);
-}
-.ordinary-heading{
-  text-align:center;margin-top:58px!important;opacity:.94;
-}
-@media(max-width:700px){
-  .nature-vision{min-height:760px;background-position:62% center}
-  .nature-copy{padding:26px 18px}
-}
-
-</style>
+<meta name="description" content="Sito ufficiale della Federazione Galattica dei Mondi: pace, giustizia, verità, conoscenza, tutela della vita e cooperazione.">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="index.html">
-      <img src="images/immagine-01.jpg" alt="Logo Federazione Galattica dei Mondi">
-      <span class="brand-text">Federazione Galattica<br>dei Mondi</span>
-    </a>
-    <input class="nav-toggle" id="nav-toggle" type="checkbox">
-    <label class="menu-button" for="nav-toggle" aria-label="Apri il menu">☰</label>
-    <nav class="nav" aria-label="Navigazione principale"><a class="" href="index.html">Home</a><a class="" href="federazione.html">La Federazione</a><a class="" href="simbolo.html">Il Simbolo</a><a class="" href="principi.html">Principi</a><a class="" href="storia.html">Storia</a><a class="" href="missione.html">Missioni</a><a class="" href="membri-onorari.html" aria-current="page">Sala d’Onore</a><a class="cta" href="adesione.html">Adesione</a><a class="" href="contatti.html">Contatti</a></nav>
-  </div>
+  <a class="brand" href="index.html">
+    <img src="images/logo-12-stelle.webp" alt="Simbolo ufficiale con dodici stelle">
+    <span>Federazione Galattica<br>dei Mondi</span>
+  </a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-label="Apri il menu">☰</button>
+  <nav class="nav" aria-label="Navigazione principale">
+    <a href="index.html">Home</a>
+<a href="federazione.html">La Federazione</a>
+<a href="simbolo.html">Il Simbolo</a>
+<a href="principi.html">Principi</a>
+<a href="storia.html">Storia</a>
+<a href="missioni.html">Missioni</a>
+<a href="sala-onore.html" class="active">Sala d’Onore</a>
+<a href="adesione.html">Adesione</a>
+<a href="contatti.html">Contatti</a>
+  </nav>
 </header>
-
-<section class="hero" style="background-image:url('images/immagine-08.png')">
- <div class="hero-content"><p class="eyebrow">Registro onorario</p><h1>Sala d’Onore</h1>
- <p class="lead">La Federazione distingue tra Membri Onorari in Missione e Membri Onorari, mantenendo discreta la numerazione ufficiale.</p></div>
-</section>
-<section class="section stars" style="background-image:url('images/immagine-02.jpg')">
- <div class="container">
-  <h2 class="prestige-heading"><span class="gold-title-frame">Membri Onorari in Missione</span></h2>
-  <div class="grid">
-   <div class="card honor-mission-card"><p class="tag">Registro FGM-2026-003</p><h3>Dott. Mariano Amici</h3><p>Riconoscimento per il contributo ai valori della conoscenza, della libertà di pensiero, della tutela della vita e del progresso umano.</p></div>
-   <div class="card honor-mission-card"><p class="tag">Registro FGM-2026-004</p><h3>Alberto Caccialanza</h3><p>Riconoscimento per il percorso umano e professionale e per l’adesione ai valori fondativi della Federazione.</p></div>
-  </div>
-  <h2 style="margin-top:52px">Membri Onorari</h2>
-  <div class="grid">
-   <div class="card"><p class="tag">Registro FGM-2026-002</p><h3>Sergio Caponegro</h3><p>Riconoscimento per il contributo al percorso di costruzione e sostegno della Federazione.</p></div>
-   <div class="card"><p class="tag">Registro FGM-2026-006</p><h3>Ciro Scognamiglio</h3><p>Riconoscimento per l’adesione ai valori di pace, giustizia, conoscenza, libertà e progresso dell’umanità.</p></div>
-  </div>
-  <p class="center" style="margin-top:35px"><strong>Coordinatrice: Perla Genovesi</strong></p>
- </div>
-</section>
-<section class="section" style="background-image:url('images/immagine-09.jpg')">
- <div class="container panel">
-  <h2><span class="gold-title-frame">Memoria delle grandi menti</span></h2>
-  <p>Una sezione dedicata a coloro che, attraverso il servizio, la ricerca, la testimonianza o il coraggio, hanno aperto una strada.</p>
-  <a class="button" href="missione.html">Visita “Coloro che hanno aperto la strada”</a>
- </div>
-</section>
-
-
+<main class="page">
+  <section class="visual">
+    <img src="images/sala-onore.webp" alt="Sala d’Onore — Federazione Galattica dei Mondi">
+    
+  </section>
+  
+</main>
+<div class="mobile-actions">
+  <a href="missioni.html">Missioni</a>
+  <a href="adesione.html">Adesione</a>
+  <a href="comunicazioni.html">Comunicazioni</a>
+  <a href="contatti.html">Contatti</a>
+</div>
 <footer class="footer">
-  <h2><span class="gold-title-frame">Federazione Galattica dei Mondi</span></h2>
-  <p>Centro di riferimento: <strong>Pianeta Terra</strong></p>
-  <p class="email"><a href="mailto:federazionegalatticadeimondi@gmail.com">federazionegalatticadeimondi@gmail.com</a></p>
-  <p class="small">Pace · Giustizia · Verità · Conoscenza · Tutela della vita · Cooperazione</p>
+  <strong>Federazione Galattica dei Mondi</strong><br>
+  <a href="mailto:federazionegalatticadeimondi@gmail.com">federazionegalatticadeimondi@gmail.com</a>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
