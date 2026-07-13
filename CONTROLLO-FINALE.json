@@ -1,5 +1,5 @@
 {
-  "html_files": [
+  "pagine": [
     "404.html",
     "adesione.html",
     "centro-operativo.html",
@@ -14,21 +14,148 @@
     "simbolo.html",
     "storia.html"
   ],
-  "missing_local_references": [],
-  "images": {
-    "centro-operativo.png": "OK",
-    "home-federazione.png": "OK",
-    "logo-12-stelle.jpg": "OK",
-    "membri-onorari.png": "OK",
-    "missioni-complete.png": "OK",
-    "pionieri.png": "OK",
-    "scienza-futuro.jpg": "OK",
-    "storia-civilta.jpg": "OK",
-    "terra-natura.jpg": "OK"
+  "immagini": {
+    "home-principale.png": {
+      "ok": true,
+      "size": [
+        1672,
+        941
+      ]
+    },
+    "logo-12-stelle.jpg": {
+      "ok": true,
+      "size": [
+        1000,
+        1000
+      ]
+    },
+    "storia-civilta.jpg": {
+      "ok": true,
+      "size": [
+        1536,
+        864
+      ]
+    },
+    "scienza-futuro.jpg": {
+      "ok": true,
+      "size": [
+        1536,
+        864
+      ]
+    },
+    "terra-natura.jpg": {
+      "ok": true,
+      "size": [
+        1536,
+        864
+      ]
+    },
+    "missioni-complete.png": {
+      "ok": true,
+      "size": [
+        1024,
+        1536
+      ]
+    },
+    "membri-onorari.png": {
+      "ok": true,
+      "size": [
+        1536,
+        1152
+      ]
+    },
+    "pionieri.png": {
+      "ok": true,
+      "size": [
+        1536,
+        864
+      ]
+    },
+    "centro-operativo.png": {
+      "ok": true,
+      "size": [
+        1536,
+        864
+      ]
+    },
+    "principi.png": {
+      "ok": true,
+      "size": [
+        1672,
+        941
+      ]
+    },
+    "simbolo-pagina.png": {
+      "ok": true,
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    "direttrici-prioritarie.png": {
+      "ok": true,
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    "sala-onore.png": {
+      "ok": true,
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    "federazione-benvenuti.png": {
+      "ok": true,
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    "interfaccia-operativa.png": {
+      "ok": true,
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    "futuro-galattico.png": {
+      "ok": true,
+      "size": [
+        1672,
+        941
+      ]
+    },
+    "storia-galattica.png": {
+      "ok": true,
+      "size": [
+        1672,
+        941
+      ]
+    },
+    "sito-ufficiale.png": {
+      "ok": true,
+      "size": [
+        1672,
+        941
+      ]
+    },
+    "atterraggio.png": {
+      "ok": true,
+      "size": [
+        1672,
+        941
+      ]
+    },
+    "valle-terra.png": {
+      "ok": true,
+      "size": [
+        1672,
+        941
+      ]
+    }
   },
-  "required_home": true,
-  "nojekyll": true,
-  "canonical_missions_page": "missioni.html",
-  "legacy_redirect": "missione.html",
-  "logo_note": "logo ritagliato dalla home approvata con 12 stelle nell'anello principale"
+  "riferimenti_mancanti": [],
+  "note": "Tutte le immagini sono dentro /images e tutti i collegamenti locali sono stati verificati."
 }
