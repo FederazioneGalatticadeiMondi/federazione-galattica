@@ -1,12 +1,19 @@
 
-const menu=document.querySelector('.menu');const nav=document.querySelector('.nav');if(menu){menu.addEventListener('click',()=>nav.classList.toggle('open'));}
-document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
-const form=document.getElementById('membershipForm');if(form){form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;const d=new FormData(form);const subject=encodeURIComponent('Candidatura alla Federazione Galattica dei Mondi');const body=encodeURIComponent(`Nome e cognome: ${d.get('nome')}
-Email: ${d.get('email')}
-Tipo di candidatura: ${d.get('tipo')}
-Paese/Mondo di origine: ${d.get('paese')}
+(()=>{const b=document.querySelector('.menu-toggle'),n=document.querySelector('.site-header nav');if(b&&n){b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',String(o));});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>n.classList.remove('open')));}const f=document.getElementById('adhesionForm');if(f){f.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(f);const body=`Nome: ${d.get('nome')}\nEmail: ${d.get('email')}\nCittà: ${d.get('citta')}\n\nCome desidero contribuire:\n${d.get('messaggio')}`;location.href='mailto:perlacorallo@yahoo.it?subject='+encodeURIComponent('Richiesta di adesione — Federazione Galattica dei Mondi')+'&body='+encodeURIComponent(body);});}})();
 
-Motivazione:
-${d.get('motivazione')}
-
-Consenso privacy: Sì`);window.location.href=`mailto:federazionegalatticadeimondi@gmail.com?subject=${subject}&body=${body}`;});}
+document.addEventListener('DOMContentLoaded', function(){
+  const form=document.getElementById('adesione-form');
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      const data=new FormData(form);
+      const subject=encodeURIComponent('Richiesta di adesione - Federazione Galattica dei Mondi');
+      const body=encodeURIComponent(
+        'Nome e cognome: '+(data.get('nome')||'')+'\n'+
+        'Email: '+(data.get('email')||'')+'\n\n'+
+        'Messaggio:\n'+(data.get('messaggio')||'')
+      );
+      window.location.href='mailto:?subject='+subject+'&body='+body;
+    });
+  }
+});
