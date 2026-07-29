@@ -1,3 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Adesione — Federazione Galattica dei Mondi</title>
+  <meta name="description" content="Modulo di richiesta di adesione alla Federazione Galattica dei Mondi">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="images/emblema-ufficiale.jpg" alt="Emblema Federazione Galattica dei Mondi"><span>Federazione Galattica<br>dei Mondi</span></a>
+    <button class="menu-toggle" aria-label="Apri menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Navigazione principale">
+      <a href="index.html">Home</a><a href="federazione.html">La Federazione</a><a href="simbolo.html">Il Simbolo</a><a href="principi.html">Principi</a><a href="storia.html">Storia</a><a href="missioni.html">Missioni</a><a href="centro-operativo.html">Centro Operativo</a><a href="membri-onorari.html">Sala d’Onore</a><a href="visioni.html">Visioni</a><a class="active" href="adesione.html">Adesione</a><a href="contatti.html">Contatti</a>
+    </nav>
+  </header>
+  <main>
+    <section class="cinematic-hero">
+      <img src="images/cause-unisciti.jpg" alt="Adesione alla Federazione">
+      <div class="hero-shade"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">PARTECIPAZIONE · RESPONSABILITÀ · PROPOSTE</p>
+        <h1>Adesione alla Federazione</h1>
+        <p>Un percorso di ingresso chiaro: presenta la tua richiesta e indica come desideri contribuire.</p>
+        <a class="btn primary" href="#modulo">Apri il modulo</a>
+      </div>
+    </section>
 
-<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Adesione — Federazione Galattica dei Mondi</title><meta content="Federazione Galattica dei Mondi" name="description"/><link href="style.css" rel="stylesheet"/></head><body><header class="site-header"><a class="brand" href="index.html"><img alt="Emblema a 12 stelle" src="images/emblema-12-stelle.png"/><span>Federazione Galattica dei Mondi</span></a><button aria-expanded="false" aria-label="Apri menu" class="menu-toggle">☰</button><nav class="main-nav"><a href="index.html">Home</a><a href="federazione.html">La Federazione</a><a href="simbolo.html">Il Simbolo</a><a href="principi.html">Principi</a><a href="storia.html">Storia</a><a href="missioni.html">Missioni</a><a href="centro-operativo.html">Centro Operativo</a><a href="membri-onorari.html">Sala d’Onore</a><a href="adesione.html">Adesione</a><a href="contatti.html">Contatti</a></nav></header><main><section class="page-title"><h1>Adesione</h1><p>Entra nella Federazione Galattica dei Mondi.</p></section><figure class="art"><img alt="Unisciti alle nostre cause" loading="lazy" src="images/cause.webp"/></figure><section class="form-wrap"><form id="adhesionForm"><label>Nome e cognome<input name="nome" required=""/></label><label>Email<input name="email" required="" type="email"/></label><label>Città<input name="citta"/></label><label>Come desideri contribuire?<textarea name="messaggio" required="" rows="6"></textarea></label><label class="check"><input required="" type="checkbox"/> Acconsento a utilizzare questi dati esclusivamente per essere ricontattato/a.</label><button class="btn primary" type="submit">Prepara richiesta di adesione</button><p class="form-note">Il pulsante apre il programma email del dispositivo con il messaggio già compilato. Nessun dato viene salvato dal sito.</p></form></section></main><footer><img alt="Emblema" src="images/emblema-12-stelle.png"/><p>Federazione Galattica dei Mondi · Pace · Giustizia · Verità · Conoscenza</p><div><a href="adesione.html">Aderisci</a> · <a href="contatti.html">Contatti</a></div></footer><script src="script.js"></script></body></html>
+    <section id="modulo" class="form-wrap adhesion-form-wrap">
+      <div class="form-intro">
+        <p class="eyebrow">FEDERAZIONE GALATTICA DEI MONDI</p>
+        <h2>Modulo di richiesta di adesione</h2>
+        <p>Compila il modulo per preparare una richiesta indirizzata a <a href="mailto:federazionegalatticadeimondi@gmail.com">federazionegalatticadeimondi@gmail.com</a>.</p>
+        <p class="form-status"><strong>Importante:</strong> il sito non invia dati a un server. Il pulsante finale apre il programma email del dispositivo con il messaggio precompilato, che dovrai controllare e inviare personalmente.</p>
+        <p class="required-note">I campi contrassegnati con <span aria-hidden="true">*</span> sono obbligatori.</p>
+      </div>
+
+      <form id="adhesionForm">
+        <fieldset class="form-section">
+          <legend><span>1</span>Dati del richiedente</legend>
+          <div class="form-row">
+            <label>Nome <span aria-hidden="true">*</span><input name="nome" autocomplete="given-name" required></label>
+            <label>Cognome <span aria-hidden="true">*</span><input name="cognome" autocomplete="family-name" required></label>
+          </div>
+          <label>Email <span aria-hidden="true">*</span><input type="email" name="email" autocomplete="email" required></label>
+          <label>Telefono <span class="optional">(facoltativo)</span><input type="tel" name="telefono" autocomplete="tel"></label>
+          <label>Città / Paese <span aria-hidden="true">*</span><input name="citta" autocomplete="address-level2 country-name" required></label>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend><span>2</span>Richiesta di adesione</legend>
+          <p class="declaration-text">Desidero presentare richiesta di adesione alla Federazione Galattica dei Mondi, condividendone i valori fondamentali di pace, giustizia, verità, armonia, collaborazione, conoscenza e rispetto tra i popoli.</p>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend><span>3</span>Motivazione personale</legend>
+          <label>Motivo della richiesta di adesione <span aria-hidden="true">*</span><textarea name="motivazione" rows="6" required></textarea></label>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend><span>4</span>Contributo alla missione</legend>
+          <label>In che modo desideri contribuire alla missione della Federazione Galattica dei Mondi? <span aria-hidden="true">*</span><textarea name="contributo" rows="6" required></textarea></label>
+          <label>Modalità o categoria di partecipazione
+            <select name="partecipazione">
+              <option value="">Seleziona una categoria</option>
+              <option>Membro attivo</option>
+              <option>Membro sostenitore</option>
+              <option>Membro informato</option>
+              <option>Proporre un progetto</option>
+            </select>
+          </label>
+        </fieldset>
+
+        <fieldset class="form-section choice-section">
+          <legend><span>5</span>Ambiti di interesse</legend>
+          <p class="choice-help">Puoi selezionare più ambiti.</p>
+          <div class="choice-grid">
+            <label class="check"><input type="checkbox" name="interessi" value="Pace e cooperazione"><span>Pace e cooperazione</span></label>
+            <label class="check"><input type="checkbox" name="interessi" value="Ricerca e conoscenza"><span>Ricerca e conoscenza</span></label>
+            <label class="check"><input type="checkbox" name="interessi" value="Arte, cultura e comunicazione"><span>Arte, cultura e comunicazione</span></label>
+            <label class="check"><input type="checkbox" name="interessi" value="Tecnologia e futuro"><span>Tecnologia e futuro</span></label>
+            <label class="check"><input type="checkbox" name="interessi" value="Volontariato e supporto organizzativo"><span>Volontariato e supporto organizzativo</span></label>
+          </div>
+          <label>Altro ambito di interesse<input name="interessi_altro"></label>
+        </fieldset>
+
+        <fieldset class="form-section choice-section">
+          <legend><span>6</span>Modalità preferita di contatto</legend>
+          <p class="choice-help">Puoi selezionare più modalità.</p>
+          <div class="choice-grid compact">
+            <label class="check"><input type="checkbox" name="contatto" value="Email"><span>Email</span></label>
+            <label class="check"><input type="checkbox" name="contatto" value="Telefono"><span>Telefono</span></label>
+            <label class="check"><input type="checkbox" name="contatto" value="WhatsApp"><span>WhatsApp</span></label>
+          </div>
+          <label>Altra modalità di contatto<input name="contatto_altro"></label>
+        </fieldset>
+
+        <fieldset class="form-section confirmation-section">
+          <legend><span>7</span>Dichiarazione personale</legend>
+          <p class="declaration-text">Con la presente richiesta dichiaro di voler partecipare con spirito pacifico, rispettoso e collaborativo, contribuendo alla costruzione di un futuro fondato sull’unione, sulla conoscenza, sulla verità e sulla pace universale.</p>
+          <label>Data della richiesta <span aria-hidden="true">*</span><input type="date" id="requestDate" name="data" required></label>
+          <label class="check confirmation"><input type="checkbox" name="conferma" required><span>Confermo consapevolmente la presente richiesta e dichiaro che le informazioni inserite corrispondono a quanto intendo comunicare. Questa conferma sostituisce nel modulo web lo spazio per la firma del documento cartaceo e non costituisce una firma elettronica.</span></label>
+        </fieldset>
+
+        <fieldset class="form-section confirmation-section">
+          <legend><span>8</span>Consenso al trattamento dei dati</legend>
+          <p class="declaration-text">Autorizzo l’utilizzo dei dati inseriti in questo modulo esclusivamente per essere ricontattato/a e per gestire la richiesta di adesione alla Federazione Galattica dei Mondi.</p>
+          <p class="privacy-notice-link">Consulta l’<a href="privacy.html">Informativa Privacy</a>, che descrive il funzionamento reale del modulo e il trattamento dei dati comunicati volontariamente.</p>
+          <label class="check confirmation"><input type="checkbox" name="consenso" required><span>Dichiaro di aver consultato l’Informativa Privacy e acconsento all’utilizzo dei dati per le finalità sopra indicate.</span></label>
+        </fieldset>
+
+        <div class="form-submit-panel">
+          <button class="btn primary" type="submit">Prepara la richiesta di adesione</button>
+          <p class="form-note">Il pulsante non invia automaticamente il modulo: apre il programma email con destinatario, oggetto e contenuto precompilati. Controlla il messaggio e premi “Invia” nel tuo programma di posta.</p>
+          <p class="mail-fallback">Se il programma email non si apre, scrivi a <a href="mailto:federazionegalatticadeimondi@gmail.com">federazionegalatticadeimondi@gmail.com</a>.</p>
+        </div>
+      </form>
+    </section>
+    <section class="royal-section centered" aria-labelledby="contributo-volontario-title">
+      <div class="section-heading">
+        <h2 id="contributo-volontario-title">Contributo libero e volontario</h2>
+        <p>L’adesione alla Federazione Galattica dei Mondi non comporta alcun obbligo economico. Chi lo desidera può sostenere liberamente le attività e le diverse missioni della Federazione con un contributo dell’importo scelto autonomamente, secondo le proprie possibilità. Il contributo è completamente facoltativo e non condiziona l’adesione, il ruolo o la partecipazione alla Federazione.</p>
+        <p><a class="btn primary" href="https://www.paypal.com/ncp/payment/Y5ZU9U8ENRAE4" target="_blank" rel="noopener noreferrer">Sostieni le missioni</a></p>
+      </div>
+    </section>
+    <section class="royal-section secondary-visual-section">
+      <div class="section-heading">
+        <p class="eyebrow">PARTECIPAZIONE E FUTURO</p>
+        <h2>Visioni della partecipazione</h2>
+        <p>Un’immagine conclusiva dedicata alla ricerca, alla cooperazione e alle cause condivise.</p>
+      </div>
+      <figure class="secondary-visual">
+        <img src="images/adesione-cause-secondaria-hd.jpeg" alt="Scienza, esplorazione e collaborazione per le cause della Federazione">
+        <figcaption>Unisciti alle nostre cause · visione di approfondimento</figcaption>
+      </figure>
+    </section>
+  </main>
+  <footer><img src="images/emblema-ufficiale.jpg" alt="Emblema"><p>Federazione Galattica dei Mondi · Pace · Giustizia · Verità · Conoscenza</p><div><a href="adesione.html">Aderisci</a><span> · </span><a href="contatti.html">Contatti</a><span> · </span><a href="privacy.html">Privacy</a></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
