@@ -2,146 +2,95 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Home — Federazione Galattica dei Mondi</title>
-<meta name="description" content="Federazione Galattica dei Mondi">
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Federazione Galattica dei Mondi — Accesso riservato</title>
+<meta name="description" content="Portale riservato della Federazione Galattica dei Mondi">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<style>
+:root{
+  --gold:#f4cf63; --gold2:#fff0a3; --ink:#06122f; --panel:rgba(5,16,48,.86);
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#020713;color:#fff;font-family:Georgia,"Times New Roman",serif}
+body{min-height:100vh;overflow-x:hidden}
+.portal{
+  min-height:100vh; position:relative; display:grid; place-items:center; padding:28px 22px 32px;
+  background:
+    radial-gradient(circle at 70% 72%, rgba(255,214,103,.24), transparent 20%),
+    radial-gradient(circle at 34% 22%, rgba(38,116,255,.30), transparent 34%),
+    linear-gradient(rgba(1,7,24,.24),rgba(1,7,24,.38)),
+    url("images/battaglia-luce-divina-home.png") center/cover fixed;
+}
+.portal:before,.portal:after{
+  content:"";position:fixed;top:0;bottom:0;width:28px;z-index:2;pointer-events:none;
+  background:linear-gradient(90deg,#7e4500,#ffd770 30%,#fff0b2 48%,#b36c05 72%,#5b3100);
+  box-shadow:0 0 28px rgba(255,202,74,.55);
+}
+.portal:before{left:0}.portal:after{right:0;transform:scaleX(-1)}
+.wrap{width:min(1120px,100%);position:relative;z-index:3;text-align:center}
+.topline{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center;margin-bottom:14px}
+.sidecopy{font-size:clamp(14px,1.6vw,23px);line-height:1.55;letter-spacing:.12em;text-shadow:0 2px 12px #000}
+.sidecopy.right{font-style:italic;letter-spacing:.03em}
+.emblem{
+  width:clamp(150px,22vw,290px);aspect-ratio:1;border-radius:50%;object-fit:cover;
+  border:3px solid rgba(255,222,124,.92);box-shadow:0 0 38px rgba(255,210,91,.45),0 0 90px rgba(30,91,255,.26);
+}
+h1{margin:8px 0 4px;color:var(--gold2);font-weight:500;font-size:clamp(34px,5.2vw,68px);line-height:.95;text-transform:uppercase;text-shadow:0 2px 3px #000,0 0 22px rgba(255,208,86,.35)}
+.motto{margin:10px 0 18px;color:#f5e8b1;letter-spacing:.18em;font-size:clamp(13px,1.7vw,20px);text-transform:uppercase;text-shadow:0 2px 8px #000}
+.card{
+  width:min(520px,92vw);margin:0 auto;background:linear-gradient(180deg,rgba(8,28,74,.92),rgba(4,13,38,.92));
+  border:1px solid rgba(255,224,137,.92);border-radius:20px;padding:22px 26px 20px;
+  box-shadow:0 22px 50px rgba(0,0,0,.55),inset 0 0 34px rgba(63,122,255,.18);
+  backdrop-filter:blur(8px)
+}
+.card h2{margin:0;color:#fff8d7;font-size:clamp(22px,3vw,34px);font-weight:500;letter-spacing:.03em}
+.card .sub{margin:3px 0 18px;color:#f2dfad;letter-spacing:.16em;font-size:13px}
+.field{width:100%;height:50px;border:1px solid #f0d784;border-radius:9px;background:rgba(4,11,32,.68);color:#fff;padding:0 16px;font-size:16px;margin:7px 0;outline:none}
+.field:focus{box-shadow:0 0 0 2px rgba(255,222,126,.18)}
+.enter{width:100%;height:51px;margin-top:10px;border:1px solid #fff0a9;border-radius:9px;background:linear-gradient(#ffe25f,#e99800);color:#281800;font-size:20px;letter-spacing:.13em;font-weight:700;cursor:pointer}
+.enter:hover{filter:brightness(1.05)}
+.row{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-top:12px;font-family:Arial,sans-serif;font-size:13px}
+.row a{color:#f6df99}
+.notice{margin:15px auto 0;max-width:660px;font:600 12px/1.5 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#fff0b8}
+.bottom{margin-top:24px;color:#f7ecc5;letter-spacing:.2em;text-transform:uppercase;font-size:clamp(13px,1.6vw,19px);text-shadow:0 2px 10px #000}
+.status{display:none;margin-top:12px;padding:10px;border:1px solid rgba(255,225,136,.7);border-radius:8px;color:#fff0b3;font:14px/1.4 Arial,sans-serif}
+.lang{position:fixed;right:45px;top:26px;z-index:5;border:1px solid rgba(255,234,170,.6);border-radius:10px;padding:8px 14px;background:rgba(3,11,35,.78);font:16px Arial,sans-serif}
+@media(max-width:760px){
+ .topline{grid-template-columns:1fr}.sidecopy{display:none}.portal:before,.portal:after{width:10px}.lang{right:18px;top:16px}
+ .card{padding:20px 18px}.wrap{padding-top:34px} h1{font-size:clamp(32px,10vw,52px)}
+}
+</style>
 </head>
-<body class="home-page">
-<header class="site-header">
-<a class="brand" href="index.html">
-<img src="images/emblema-ufficiale.jpg" alt="Emblema Federazione Galattica dei Mondi">
-<span>Federazione Galattica<br>dei Mondi</span>
-</a>
-<button class="menu-toggle" aria-label="Apri menu" aria-expanded="false">☰</button>
-<nav class="main-nav">
-<a class="active" href="index.html">Home</a>
-<a class="" href="federazione.html">La Federazione</a>
-<a class="" href="simbolo.html">Il Simbolo</a>
-<a class="" href="principi.html">Principi</a>
-<a class="" href="storia.html">Storia</a>
-<a class="" href="missioni.html">Missioni</a>
-<a class="" href="centro-operativo.html">Centro Operativo</a>
-<a class="" href="membri-onorari.html">Area Membri</a>
-<a class="" href="visioni.html">Visioni</a>
-<a class="" href="adesione.html">Adesione</a>
-<a class="" href="contatti.html">Contatti</a>
-</nav>
-</header>
-<main>
-<section class="cinematic-hero home-cinematic-hero">
-<img src="images/battaglia-luce-divina-home.png" alt="La Battaglia di Luce Divina: guerriero con lo scudo della Federazione e armata celeste">
-<div class="hero-shade">
-</div>
-<div class="hero-copy">
-<p class="eyebrow">FEDERAZIONE GALATTICA DEI MONDI</p>
-<h1>Verso un futuro di pace, amore, giustizia, verità, libertà e conoscenza.</h1>
-<div class="home-manifesto">
-<p>Crediamo che ogni cosa appartenga a un unico disegno universale e che nulla esista davvero separato dal tutto. Luce e ombra, bene e male, gioia e dolore ci hanno permesso di conoscere, comprendere, scegliere e crescere, così come comprendiamo il dolce anche attraverso l’esperienza dell’amaro. Ma ogni prova ha un compimento e ogni crescita uno scopo: quando la consapevolezza matura e la lezione è compresa, il dolore non deve più essere necessario.</p>
-<p>Oggi siamo nel tempo del cambiamento. Può aprirsi una nuova era in cui pace, giustizia, libertà, conoscenza e abbondanza non siano più soltanto ideali lontani, ma possibilità concrete dell’esistenza; un tempo in cui ciascuno possa vivere pienamente secondo le proprie aspirazioni, i propri desideri, meriti, talenti, competenze, conoscenze e attitudini, e possa finalmente essere riconosciuto non soltanto per ciò che era visibile agli occhi degli uomini, ma per ciò che autenticamente è, anche nella sua natura più profonda.</p>
-<p>Ciò che un tempo poteva rimanere nascosto può ora venire alla luce. Ciò che non veniva riconosciuto può finalmente trovare riconoscimento. Il cambiamento non appartiene soltanto al futuro: comincia nel presente, qui e ora. È tempo di farne parte.</p>
-</div>
-<div class="hero-actions-inline">
-<a class="btn primary" href="adesione.html">Entra nella Federazione</a>
-<a class="btn" href="simbolo.html">Scopri il simbolo</a>
-<a class="btn" href="membri-onorari.html">Area Membri</a>
-</div>
-</div>
-</section>
-<section class="home-video-section" aria-label="Presentazione audiovisiva della Federazione Galattica dei Mondi">
-<div class="home-video-frame">
-<video controls preload="metadata" playsinline poster="media/presentazione-federazione-poster.jpg" aria-label="Presentazione audiovisiva della Federazione Galattica dei Mondi">
-<source src="media/presentazione-federazione.mp4" type="video/mp4">
-Il browser in uso non supporta la riproduzione video.
-</video>
-</div>
-</section>
-<section class="royal-section">
-<div class="section-heading">
-<p class="eyebrow">PORTALE INTERATTIVO</p>
-<h2>Esplora la Federazione</h2>
-<p>Le immagini non sono elementi decorativi isolati: ogni riquadro apre una sezione reale del sito.</p>
-</div>
-<div class="image-portal-grid">
-<a class="image-portal" href="storia.html">
-<img src="images/home-card-storia-hd.jpeg" alt="La nostra storia">
-<div class="portal-copy">
-<h2>La nostra storia</h2>
-<p>Origini, passaggi, memoria e visione del futuro.</p>
-<span class="card-button">Apri la storia →</span>
-</div>
-</a>
-<a class="image-portal" href="missioni.html">
-<img src="images/home-card-missioni-hd.jpeg" alt="Missioni e direttrici">
-<div class="portal-copy">
-<h2>Missioni e direttrici</h2>
-<p>Azioni, proposte, collaborazioni e priorità.</p>
-<span class="card-button">Esplora le missioni →</span>
-</div>
-</a>
-<a class="image-portal" href="contatti.html">
-<img src="images/riferimenti-ufficiali.jpg" alt="Riferimenti e contatti">
-<div class="portal-copy">
-<h2>Riferimenti e contatti</h2>
-<p>Accessi, comunicazioni, reti e progetti.</p>
-<span class="card-button">Vai ai riferimenti →</span>
-</div>
-</a>
-<a class="image-portal" href="principi.html">
-<img src="images/direttrici-prioritarie.jpg" alt="Direttrici prioritarie">
-<div class="portal-copy">
-<h2>Direttrici prioritarie</h2>
-<p>Tutela della vita, pace, conoscenza e cooperazione.</p>
-<span class="card-button">Approfondisci →</span>
-</div>
-</a>
-<a class="image-portal" href="missioni.html">
-<img src="images/terra-natura-luce.jpg" alt="Custodia del pianeta">
-<div class="portal-copy">
-<h2>Custodia del pianeta</h2>
-<p>Natura, biodiversità, responsabilità verso le generazioni future.</p>
-<span class="card-button">Scopri le azioni →</span>
-</div>
-</a>
-<a class="image-portal" href="adesione.html">
-<img src="images/cause-unisciti.jpg" alt="Unisciti alle nostre cause">
-<div class="portal-copy">
-<h2>Unisciti alle nostre cause</h2>
-<p>Dalle idee alla partecipazione concreta.</p>
-<span class="card-button">Partecipa →</span>
-</div>
-</a>
-</div>
-</section>
-<section class="council-sequence council-evolution" aria-label="Evoluzione visiva del Grande Concilio dei Mondi">
-<button class="artwork-zoom" type="button" data-lightbox-image="images/concilio-01-consiglio-dei-mondi.png">
-<img src="images/concilio-01-consiglio-dei-mondi.png" alt="Il Grande Concilio dei Mondi riunito prima della configurazione divina" loading="lazy" decoding="async">
-<span class="visually-hidden">Apri la prima fase del Grande Concilio in grande</span>
-</button>
-<button class="artwork-zoom" type="button" data-lightbox-image="images/concilio-02-padre-e-regina.png">
-<img src="images/concilio-02-padre-e-regina.png" alt="Il Grande Concilio con Dio Padre e la Regina nella configurazione celeste" loading="lazy" decoding="async">
-<span class="visually-hidden">Apri la seconda fase del Grande Concilio in grande</span>
-</button>
-<button class="artwork-zoom" type="button" data-lightbox-image="images/concilio-03-padre-e-madre.png">
-<img src="images/concilio-03-padre-e-madre.png" alt="Configurazione finale del Grande Concilio con Dio Padre e Dea Madre assisi in trono" loading="lazy" decoding="async">
-<span class="visually-hidden">Apri la configurazione finale del Grande Concilio in grande</span>
-</button>
-</section>
-<dialog class="artwork-lightbox" aria-label="Visualizzazione ingrandita">
-<button class="artwork-lightbox-close" type="button" aria-label="Chiudi immagine ingrandita">×</button>
-<img alt="Opera del Grande Consiglio visualizzata in formato ingrandito">
-</dialog>
+<body>
+<div class="lang">IT ▾</div>
+<main class="portal">
+  <div class="wrap">
+    <div class="topline">
+      <div class="sidecopy">UN SOLO PIANETA<br>UNA SOLA FAMIGLIA<br>INFINITI MONDI</div>
+      <img class="emblem" src="images/emblema-ufficiale.jpg" alt="Emblema della Federazione Galattica dei Mondi">
+      <div class="sidecopy right">“Insieme<br>per un futuro di luce”</div>
+    </div>
+    <h1>Federazione Galattica<br>dei Mondi</h1>
+    <div class="motto">Unità · Armonia · Giustizia · Benessere</div>
+
+    <form class="card" id="loginForm">
+      <h2>🔒 ACCESSO RISERVATO</h2>
+      <div class="sub">AREA MEMBRI</div>
+      <input class="field" autocomplete="username" placeholder="Nome utente o email" aria-label="Nome utente o email">
+      <input class="field" type="password" autocomplete="current-password" placeholder="Password" aria-label="Password">
+      <button class="enter" type="submit">ENTRA</button>
+      <div class="row"><label><input type="checkbox"> Ricordami</label><a href="#" id="forgot">Password dimenticata?</a></div>
+      <div class="status" id="status">Accessi individuali in fase di attivazione. Il portale interno resta riservato e non è ancora pubblicamente disponibile.</div>
+    </form>
+
+    <div class="notice">Accessi su invito · Registrazioni temporaneamente chiuse</div>
+    <div class="bottom">Conoscere · Rispettare · Co-creare</div>
+  </div>
 </main>
-<footer>
-<img src="images/emblema-ufficiale.jpg" alt="Emblema">
-<p>Federazione Galattica dei Mondi · Pace · Giustizia · Verità · Conoscenza</p>
-<div>
-<a href="adesione.html">Aderisci</a>
-<span> · </span>
-<a href="contatti.html">Contatti</a><span> · </span><a href="privacy.html">Privacy</a>
-</div>
-</footer>
-<script src="script.js">
+<script>
+const form=document.getElementById('loginForm'),status=document.getElementById('status');
+form.addEventListener('submit',e=>{e.preventDefault();status.style.display='block'});
+document.getElementById('forgot').addEventListener('click',e=>{e.preventDefault();status.style.display='block'});
 </script>
 </body>
 </html>
