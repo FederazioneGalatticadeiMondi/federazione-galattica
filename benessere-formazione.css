@@ -35,3 +35,12 @@ footer{padding:28px 20px;text-align:center;border-top:1px solid rgba(218,164,65,
 @media(max-width:1000px){.membership-grid{grid-template-columns:1fr}.flow-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:800px){.tier-grid.two,.content-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.flow-grid{grid-template-columns:1fr}}
+
+/* FGM Exchange — barter and internal credits */
+.exchange-section{border-top:1px solid rgba(126,223,210,.18);border-bottom:1px solid rgba(126,223,210,.18);background:radial-gradient(circle at 50% 0,rgba(126,223,210,.08),transparent 34%)}
+.exchange-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.exchange-grid article{padding:24px;border:1px solid rgba(126,223,210,.34);border-radius:14px;background:linear-gradient(145deg,rgba(4,22,40,.94),rgba(8,31,52,.82));box-shadow:0 16px 34px rgba(0,0,0,.24)}
+.exchange-grid h3,.exchange-example h3{color:#a8eee5;margin:.2em 0 .45em}
+.exchange-example{margin-top:22px;border-color:rgba(126,223,210,.42)}
+@media(max-width:1000px){.exchange-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.exchange-grid{grid-template-columns:1fr}}
