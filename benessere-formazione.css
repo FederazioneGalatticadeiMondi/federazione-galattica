@@ -15,3 +15,23 @@ body{margin:0;background:radial-gradient(circle at 20% 0,rgba(26,107,127,.14),tr
 footer{padding:28px 20px;text-align:center;border-top:1px solid rgba(218,164,65,.32);color:#cbd4df;font:13px Arial,sans-serif}
 @media(max-width:900px){.tier-grid{grid-template-columns:1fr}.discipline-grid{grid-template-columns:repeat(2,1fr)}.principles{grid-template-columns:1fr}}
 @media(max-width:600px){.site-header{padding:10px 12px}.brand img{width:46px;height:46px}.brand strong{font-size:15px}.brand span{font-size:10px}.draft-badge{display:none}.hero{padding:60px 16px 44px}.section{padding:46px 15px}.section.soft>.section-heading,.section.soft>.discipline-grid,.section.soft>.wide-card{width:min(100% - 30px,1180px)}.discipline-grid{grid-template-columns:1fr}.tier{padding:24px 20px}}
+/* Membership, value flow and FGM content cards */
+.membership-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.membership-card{padding:28px 24px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(160deg,rgba(7,26,49,.97),rgba(3,13,29,.97));box-shadow:0 18px 40px rgba(0,0,0,.28)}
+.membership-card.supporter{border-color:#e6bd61}
+.membership-card.partner{border-color:#7edfd2}
+.membership-icon{display:grid;place-items:center;width:64px;height:64px;margin-bottom:15px;border:1px solid rgba(246,212,135,.62);border-radius:50%;color:#f6d487;font-size:30px;background:radial-gradient(circle,rgba(218,164,65,.16),rgba(2,10,24,.25))}
+.membership-card h3,.content-grid h3,.flow-grid h3{color:#f2c96f;margin:.25em 0 .45em}
+.membership-card ul{padding-left:20px}
+.membership-card li{margin:.45em 0}
+.tier-grid.two{grid-template-columns:repeat(2,1fr)}
+.content-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.content-grid article,.flow-grid article{padding:24px;border:1px solid rgba(218,164,65,.42);border-radius:14px;background:linear-gradient(145deg,rgba(5,19,39,.93),rgba(7,28,52,.8))}
+.content-icon{font-size:34px;margin-bottom:10px}
+.flow-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.flow-grid article>strong{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#b88129,#efd17d);color:#071125;font-size:20px}
+.wide-card.policy{margin-top:24px}
+.wide-card.policy h3{margin-top:0;color:#f2c96f}
+@media(max-width:1000px){.membership-grid{grid-template-columns:1fr}.flow-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:800px){.tier-grid.two,.content-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.flow-grid{grid-template-columns:1fr}}
