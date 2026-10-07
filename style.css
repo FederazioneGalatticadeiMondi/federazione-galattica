@@ -44,7 +44,7 @@ body:before{display:none!important}
 .home-cinematic-hero{min-height:0;margin-bottom:30px;background:#01040b}
 .home-cinematic-hero>img{position:relative;inset:auto;display:block;width:100%;height:auto;object-fit:contain;object-position:center;filter:brightness(1.035) contrast(1.075) saturate(1.08) drop-shadow(0 8px 16px rgba(223,171,68,.10))}
 .home-cinematic-hero .hero-shade{display:none}
-.home-cinematic-hero .hero-copy{position:relative;left:auto;right:auto;bottom:auto;display:grid;grid-template-columns:1fr;grid-template-areas:"eyebrow" "title" "manifesto" "actions";row-gap:14px;width:100%;max-width:none;padding:27px clamp(26px,4.4vw,66px) 30px;border-left:0;border-top:1px solid rgba(231,184,82,.80);background:linear-gradient(180deg,rgba(2,9,25,.72),rgba(1,8,23,.79)),url('images/manifesto-firmamento-san-lorenzo.jpg') center 52%/cover no-repeat;box-shadow:inset 0 18px 36px -28px rgba(125,194,255,.72),inset 0 2px 0 rgba(255,220,137,.10);backdrop-filter:none}
+.home-cinematic-hero .hero-copy{position:relative;left:auto;right:auto;bottom:auto;display:grid;grid-template-columns:1fr;grid-template-areas:"eyebrow" "title" "manifesto" "actions";row-gap:14px;width:100%;max-width:none;padding:27px clamp(26px,4.4vw,66px) 30px;border-left:0;border-top:1px solid rgba(231,184,82,.80);background:linear-gradient(180deg,rgba(2,9,25,.72),rgba(1,8,23,.79)),url('images/scienza-futuro.jpg') center 52%/cover no-repeat;box-shadow:inset 0 18px 36px -28px rgba(125,194,255,.72),inset 0 2px 0 rgba(255,220,137,.10);backdrop-filter:none}
 .home-cinematic-hero .hero-copy .eyebrow{grid-area:eyebrow;margin:0;font-size:11px!important}
 .home-cinematic-hero .hero-copy h1{grid-area:title;font-size:clamp(30px,3.1vw,44px);line-height:1.1;margin:0;max-width:1080px;color:#f7d586;text-shadow:0 2px 5px rgba(0,0,0,.92),0 0 20px rgba(224,174,70,.18)}
 .home-cinematic-hero .home-manifesto{grid-area:manifesto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(30px,3.2vw,48px);max-width:1420px;padding:18px 0 3px;border-top:1px solid rgba(229,181,78,.36)}
@@ -60,7 +60,7 @@ body:before{display:none!important}
 
 /* Home: allineamento, continuità e micro-riflessi */
 .home-page .brand span{transform:translateY(3px)}
-.home-page main{background:linear-gradient(180deg,rgba(1,7,21,.16),rgba(1,7,21,.34)),url('images/manifesto-firmamento-san-lorenzo.jpg') center bottom/cover fixed no-repeat}
+.home-page main{background:linear-gradient(180deg,rgba(1,7,21,.16),rgba(1,7,21,.34)),url('images/scienza-futuro.jpg') center bottom/cover fixed no-repeat}
 .home-page .home-cinematic-hero{background:transparent}
 .home-page .home-cinematic-hero .hero-copy{background:linear-gradient(180deg,rgba(2,9,25,.72),rgba(1,8,23,.79))}
 .home-page .royal-section{background:linear-gradient(145deg,rgba(1,7,19,.82),rgba(8,18,40,.70))!important}
@@ -128,7 +128,7 @@ body:before{display:none!important}
 
 /* Profondità cosmica, visual e sequenza del simbolo */
 body{
-  background:#03101f url('images/manifesto-firmamento-san-lorenzo.jpg') center top/cover fixed no-repeat;
+  background:#03101f url('images/scienza-futuro.jpg') center top/cover fixed no-repeat;
 }
 body:before{
   background:
